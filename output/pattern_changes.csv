@@ -1,0 +1,36 @@
+company_id,prev_year,prev_pattern,latest_year,latest_pattern
+ADANIENSOL,2023,Mixed,2024,Reinvestor
+ADANIENT,2023,Reinvestor,2024,Mixed
+ADANIGREEN,2023,Reinvestor,2024,Mixed
+AXISBANK,2023,Mixed,2024,Growth Funded by Debt
+BAJAJ-AUTO,2023,Liquidating Assets,2024,Reinvestor
+BANKBARODA,2023,Pre-Revenue,2024,Growth Funded by Debt
+BEL,2023,Liquidating Assets,2024,Reinvestor
+BRITANNIA,2023,Reinvestor,2024,Liquidating Assets
+CANBK,2023,Growth Funded by Debt,2024,Reinvestor
+DLF,2023,Reinvestor,2024,Mixed
+GAIL,2023,Mixed,2024,Reinvestor
+GODREJCP,2023,Reinvestor,2024,Mixed
+HAVELLS,2023,Liquidating Assets,2024,Reinvestor
+HDFCBANK,2023,Mixed,2024,Liquidating Assets
+HDFCLIFE,2023,Mixed,2024,Reinvestor
+ICICIBANK,2023,Growth Funded by Debt,2024,Mixed
+ICICIPRULI,2023,Reinvestor,2024,Unknown
+INDUSINDBK,2023,Growth Funded by Debt,2024,Pre-Revenue
+IRFC,2023,Distress Signal,2024,Reinvestor
+ITC,2023,Reinvestor,2024,Liquidating Assets
+JINDALSTEL,2023,Reinvestor,2024,Mixed
+JIOFIN,2023,Reinvestor,2024,Unknown
+KOTAKBANK,2023,Growth Funded by Debt,2024,Mixed
+LODHA,2023,Liquidating Assets,2024,Mixed
+LT,2023,Reinvestor,2024,Liquidating Assets
+MOTHERSON,2023,Reinvestor,2024,Mixed
+PNB,2023,Mixed,2024,Growth Funded by Debt
+RELIANCE,2023,Mixed,2024,Reinvestor
+SBIN,2023,Growth Funded by Debt,2024,Reinvestor
+SHRIRAMFIN,2023,Distress Signal,2024,Growth Funded by Debt
+SUNPHARMA,2023,Mixed,2024,Reinvestor
+TATACONSUM,2023,Reinvestor,2024,Mixed
+TATAPOWER,2023,Mixed,2024,Reinvestor
+TITAN,2023,Mixed,2024,Reinvestor
+TORNTPHARM,2023,Mixed,2024,Reinvestor

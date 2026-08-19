@@ -1,0 +1,35 @@
+[tool.black]
+line-length = 100
+target-version = ["py312"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+# Keep the check focused on real correctness issues (pycodestyle +
+# pyflakes) rather than opinionated style rules. Day 44 code-quality
+# pass: `ruff check src/ tests/` should be clean under this config.
+select = ["E", "F", "W"]
+ignore = [
+    # Every test file does `sys.path.insert(...)` before importing
+    # from `src` (no installed package / editable install in this
+    # project), which pyflakes/pycodestyle read as "import not at
+    # top of file". That's an intentional, consistent convention
+    # across the whole tests/ tree, not a real ordering bug.
+    "E402",
+    # tests/kpi/test_*.py use `from module import *` deliberately
+    # (they're meant to read as "does every public ratio function
+    # exist and behave"), so a handful of names look "possibly
+    # undefined" to a static linter even though pytest resolves and
+    # exercises every one of them at collection/run time.
+    "F403",
+    "F405",
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["E501"]
+# Long, human-readable pros/cons explanation strings - splitting
+# these mid-sentence to satisfy an 100-char limit would hurt
+# readability more than it helps, so this one file gets a pass.
+"src/nlp/pros_cons_generator.py" = ["E501"]

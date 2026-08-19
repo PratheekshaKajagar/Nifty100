@@ -1,0 +1,91 @@
+company_id,cluster_id,cluster_name,distance_from_centroid
+JINDALSTEL,0,Defensive Dividend Payers,0.1215424714868746
+RELIANCE,0,Defensive Dividend Payers,0.1231286740401515
+ONGC,0,Defensive Dividend Payers,0.152309052675502
+GODREJCP,0,Defensive Dividend Payers,0.1718215593183183
+TRENT,0,Defensive Dividend Payers,0.2127335349092779
+JSWSTEEL,0,Defensive Dividend Payers,0.2334392195328369
+AMBUJACEM,0,Defensive Dividend Payers,0.2461463706096072
+SHREECEM,0,Defensive Dividend Payers,0.2512469639810756
+INFY,0,Defensive Dividend Payers,0.2658863169764993
+ASIANPAINT,0,Defensive Dividend Payers,0.3045828801753479
+TCS,0,Defensive Dividend Payers,0.3088693862028329
+APOLLOHOSP,0,Defensive Dividend Payers,0.3269299737711159
+TATAMOTORS,0,Defensive Dividend Payers,0.3334382790703266
+M&M,0,Defensive Dividend Payers,0.3488949034605934
+NESTLEIND,0,Defensive Dividend Payers,0.3527540008826156
+NAUKRI,0,Defensive Dividend Payers,0.3729381998376624
+MARUTI,0,Defensive Dividend Payers,0.3732887911977576
+GAIL,0,Defensive Dividend Payers,0.4086690809354096
+BPCL,0,Defensive Dividend Payers,0.4088436647416055
+NTPC,0,Defensive Dividend Payers,0.4090395215594904
+IOC,0,Defensive Dividend Payers,0.4117578140679215
+TORNTPHARM,0,Defensive Dividend Payers,0.4163159617298763
+TATASTEEL,0,Defensive Dividend Payers,0.4214782149227839
+LTIM,0,Defensive Dividend Payers,0.4319690042989791
+HCLTECH,0,Defensive Dividend Payers,0.4380649383666104
+PIDILITIND,0,Defensive Dividend Payers,0.4699044001111196
+BAJAJ-AUTO,0,Defensive Dividend Payers,0.4798657411507712
+EICHERMOT,0,Defensive Dividend Payers,0.4838885110268517
+DMART,0,Defensive Dividend Payers,0.5245203338405858
+TECHM,0,Defensive Dividend Payers,0.5299801254862739
+MOTHERSON,0,Defensive Dividend Payers,0.5801793950754727
+ABB,0,Defensive Dividend Payers,0.5900765245200562
+TATAPOWER,0,Defensive Dividend Payers,0.5940033558739986
+DIVISLAB,0,Defensive Dividend Payers,0.7149180219572355
+DABUR,0,Defensive Dividend Payers,0.7307247775294469
+BOSCHLTD,0,Defensive Dividend Payers,0.7330635627442548
+ITC,0,Defensive Dividend Payers,0.7363156142959256
+TITAN,0,Defensive Dividend Payers,0.7435448311901046
+GRASIM,0,Defensive Dividend Payers,0.7570014479648209
+LT,0,Defensive Dividend Payers,0.7787428624178834
+LODHA,0,Defensive Dividend Payers,0.809934226989666
+ADANIENT,0,Defensive Dividend Payers,0.8432845622166383
+ADANIPOWER,0,Defensive Dividend Payers,0.8619487900196363
+HAVELLS,0,Defensive Dividend Payers,0.9099621778311062
+DLF,0,Defensive Dividend Payers,0.9276082638602372
+ADANIENSOL,0,Defensive Dividend Payers,0.9331653588547671
+BHEL,0,Defensive Dividend Payers,0.9659493775280852
+IRCTC,0,Defensive Dividend Payers,0.9726126317339242
+SBILIFE,0,Defensive Dividend Payers,0.9958310085539666
+JSWENERGY,0,Defensive Dividend Payers,1.010001128571888
+SUNPHARMA,0,Defensive Dividend Payers,1.0962881581274817
+TVSMOTOR,0,Defensive Dividend Payers,1.1254579446727029
+DRREDDY,0,Defensive Dividend Payers,1.2090349248362573
+BAJFINANCE,0,Defensive Dividend Payers,1.284630906690044
+SHRIRAMFIN,0,Defensive Dividend Payers,1.332041293077293
+BHARTIARTL,0,Defensive Dividend Payers,1.3457992504361391
+SIEMENS,0,Defensive Dividend Payers,1.417884943299902
+NHPC,0,Defensive Dividend Payers,1.4348796377309718
+BRITANNIA,0,Defensive Dividend Payers,1.550855506575626
+TATACONSUM,0,Defensive Dividend Payers,1.5803096668244483
+LICI,0,Defensive Dividend Payers,2.0335042535867687
+JIOFIN,1,Emerging Growth (Recent Listing - Small Sample),0.0
+HDFCBANK,2,Value Cyclicals (Leveraged Financials),0.3133062459763125
+ICICIBANK,2,Value Cyclicals (Leveraged Financials),0.435598795285562
+INDUSINDBK,2,Value Cyclicals (Leveraged Financials),0.6779773114338368
+PFC,2,Value Cyclicals (Leveraged Financials),0.8029853639177905
+AXISBANK,2,Value Cyclicals (Leveraged Financials),0.8334578432014855
+CHOLAFIN,2,Value Cyclicals (Leveraged Financials),1.053938056461729
+ADANIGREEN,2,Value Cyclicals (Leveraged Financials),1.099161672430996
+BAJAJFINSV,2,Value Cyclicals (Leveraged Financials),1.172459168902138
+PNB,2,Value Cyclicals (Leveraged Financials),1.42834274093881
+KOTAKBANK,2,Value Cyclicals (Leveraged Financials),1.5905277592613962
+IRFC,2,Value Cyclicals (Leveraged Financials),1.6438893334490297
+RECLTD,2,Value Cyclicals (Leveraged Financials),1.7003210546204623
+BANKBARODA,2,Value Cyclicals (Leveraged Financials),1.7700600774107078
+CANBK,2,Value Cyclicals (Leveraged Financials),2.6373153779091374
+BEL,3,Emerging Growth (Defense PSUs),0.7401679359941333
+HAL,3,Emerging Growth (Defense PSUs),0.7401679359941342
+ICICIGI,4,High-Quality Compounders,0.2354834712733587
+BAJAJHLDNG,4,High-Quality Compounders,0.4604377714194781
+POWERGRID,4,High-Quality Compounders,0.4717238817094132
+HINDUNILVR,4,High-Quality Compounders,0.737876320263421
+HINDALCO,4,High-Quality Compounders,0.8906340738824127
+HEROMOTOCO,4,High-Quality Compounders,0.951091422081812
+ADANIPORTS,4,High-Quality Compounders,0.95303617677165
+COALINDIA,4,High-Quality Compounders,1.0142092256054878
+HDFCLIFE,4,High-Quality Compounders,1.4999111037290058
+INDIGO,4,High-Quality Compounders,1.7588199944882408
+ICICIPRULI,4,High-Quality Compounders,2.878235816301284
+CIPLA,4,High-Quality Compounders,6.308870534348919

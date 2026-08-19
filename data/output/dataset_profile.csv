@@ -1,0 +1,13 @@
+Dataset,Rows,Columns,Missing,Duplicates,Memory (KB)
+analysis,21,6,0,0,2.95
+balancesheet,1313,13,0,0,547.59
+cashflow,1188,7,8,0,244.98
+companies,93,12,9,0,70.46
+documents,1586,4,52,0,235.1
+financial_ratios,1184,16,170,0,165.51
+market_cap,552,9,0,0,42.71
+peer_groups,56,4,0,0,2.54
+profitandloss,1277,15,231,0,621.37
+prosandcons,17,4,6,0,2.58
+sectors,92,6,0,0,8.3
+stock_prices,5520,9,0,0,479.89

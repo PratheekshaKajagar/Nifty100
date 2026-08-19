@@ -1,0 +1,26 @@
+Dataset,Possible Primary Key
+analysis,Bluestock Fintech — Nifty 100  |  Analysis  |  20 records
+analysis,Unnamed: 2
+analysis,Unnamed: 4
+analysis,Unnamed: 5
+balancesheet,"Bluestock Fintech — Nifty 100  |  Balance Sheet  |  1,312 records"
+cashflow,"Bluestock Fintech — Nifty 100  |  Cash Flow  |  1,187 records"
+companies,Mkt Fintech — Nifty 100  |  Companies  |  92 records
+companies,Unnamed: 2
+companies,Unnamed: 4
+companies,Unnamed: 6
+companies,Unnamed: 7
+documents,"Bluestock Fintech — Nifty 100  |  Documents  |  1,585 records"
+financial_ratios,id
+market_cap,id
+market_cap,market_cap_crore
+market_cap,enterprise_value_crore
+peer_groups,id
+peer_groups,company_id
+profitandloss,"Bluestock Fintech — Nifty 100  |  Profit & Loss  |  1,276 records"
+prosandcons,Bluestock Fintech — Nifty 100  |  Pros & Cons  |  16 records
+prosandcons,Unnamed: 3
+sectors,id
+sectors,company_id
+stock_prices,id
+stock_prices,volume

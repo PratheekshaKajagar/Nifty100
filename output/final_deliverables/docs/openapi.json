@@ -1,0 +1,1477 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Nifty100 Data Foundation API",
+    "description": "Internal API over the Nifty100 fundamentals/screener/analytics data foundation.",
+    "version": "0.1.0"
+  },
+  "paths": {
+    "/api/v1/health": {
+      "get": {
+        "tags": [
+          "health"
+        ],
+        "summary": "Health Check",
+        "description": "Health check.",
+        "operationId": "health_check_api_v1_health_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/companies": {
+      "get": {
+        "tags": [
+          "companies"
+        ],
+        "summary": "List Companies",
+        "description": "List companies.",
+        "operationId": "list_companies_api_v1_companies_get",
+        "parameters": [
+          {
+            "name": "sector",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "Filter by broad_sector",
+              "title": "Sector"
+            },
+            "description": "Filter by broad_sector"
+          },
+          {
+            "name": "market_cap_category",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "Filter by market_cap_category",
+              "title": "Market Cap Category"
+            },
+            "description": "Filter by market_cap_category"
+          },
+          {
+            "name": "search",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "Partial match on company name or ticker",
+              "title": "Search"
+            },
+            "description": "Partial match on company name or ticker"
+          },
+          {
+            "name": "db_path",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "default": "/home/claude/work6/Nifty100_Data_Foundation/data/nifty100.db",
+              "title": "Db Path"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/companies/{ticker}": {
+      "get": {
+        "tags": [
+          "companies"
+        ],
+        "summary": "Get Company",
+        "description": "Get company.",
+        "operationId": "get_company_api_v1_companies__ticker__get",
+        "parameters": [
+          {
+            "name": "ticker",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Ticker"
+            }
+          },
+          {
+            "name": "db_path",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "default": "/home/claude/work6/Nifty100_Data_Foundation/data/nifty100.db",
+              "title": "Db Path"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/companies/{ticker}/pl": {
+      "get": {
+        "tags": [
+          "companies"
+        ],
+        "summary": "Company Pl",
+        "description": "Company pl.",
+        "operationId": "company_pl_api_v1_companies__ticker__pl_get",
+        "parameters": [
+          {
+            "name": "ticker",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Ticker"
+            }
+          },
+          {
+            "name": "from_year",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "YYYY or YYYY-MM",
+              "title": "From Year"
+            },
+            "description": "YYYY or YYYY-MM"
+          },
+          {
+            "name": "to_year",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "YYYY or YYYY-MM",
+              "title": "To Year"
+            },
+            "description": "YYYY or YYYY-MM"
+          },
+          {
+            "name": "db_path",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "default": "/home/claude/work6/Nifty100_Data_Foundation/data/nifty100.db",
+              "title": "Db Path"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/companies/{ticker}/bs": {
+      "get": {
+        "tags": [
+          "companies"
+        ],
+        "summary": "Company Balance Sheet",
+        "description": "Company balance sheet.",
+        "operationId": "company_balance_sheet_api_v1_companies__ticker__bs_get",
+        "parameters": [
+          {
+            "name": "ticker",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Ticker"
+            }
+          },
+          {
+            "name": "from_year",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "YYYY or YYYY-MM",
+              "title": "From Year"
+            },
+            "description": "YYYY or YYYY-MM"
+          },
+          {
+            "name": "to_year",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "YYYY or YYYY-MM",
+              "title": "To Year"
+            },
+            "description": "YYYY or YYYY-MM"
+          },
+          {
+            "name": "db_path",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "default": "/home/claude/work6/Nifty100_Data_Foundation/data/nifty100.db",
+              "title": "Db Path"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/companies/{ticker}/cashflow": {
+      "get": {
+        "tags": [
+          "companies"
+        ],
+        "summary": "Company Cashflow",
+        "description": "Company cashflow.",
+        "operationId": "company_cashflow_api_v1_companies__ticker__cashflow_get",
+        "parameters": [
+          {
+            "name": "ticker",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Ticker"
+            }
+          },
+          {
+            "name": "from_year",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "YYYY or YYYY-MM",
+              "title": "From Year"
+            },
+            "description": "YYYY or YYYY-MM"
+          },
+          {
+            "name": "to_year",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "YYYY or YYYY-MM",
+              "title": "To Year"
+            },
+            "description": "YYYY or YYYY-MM"
+          },
+          {
+            "name": "db_path",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "default": "/home/claude/work6/Nifty100_Data_Foundation/data/nifty100.db",
+              "title": "Db Path"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/companies/{ticker}/ratios": {
+      "get": {
+        "tags": [
+          "companies"
+        ],
+        "summary": "Company Ratios",
+        "description": "Company ratios.",
+        "operationId": "company_ratios_api_v1_companies__ticker__ratios_get",
+        "parameters": [
+          {
+            "name": "ticker",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Ticker"
+            }
+          },
+          {
+            "name": "year",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "Return a single year's ratios (YYYY or YYYY-MM)",
+              "title": "Year"
+            },
+            "description": "Return a single year's ratios (YYYY or YYYY-MM)"
+          },
+          {
+            "name": "db_path",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "default": "/home/claude/work6/Nifty100_Data_Foundation/data/nifty100.db",
+              "title": "Db Path"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/companies/{ticker}/tearsheet": {
+      "get": {
+        "tags": [
+          "companies"
+        ],
+        "summary": "Company Tearsheet",
+        "description": "Company tearsheet.",
+        "operationId": "company_tearsheet_api_v1_companies__ticker__tearsheet_get",
+        "parameters": [
+          {
+            "name": "ticker",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Ticker"
+            }
+          },
+          {
+            "name": "db_path",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "default": "/home/claude/work6/Nifty100_Data_Foundation/data/nifty100.db",
+              "title": "Db Path"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/companies/{ticker}/peers/compare": {
+      "get": {
+        "tags": [
+          "companies"
+        ],
+        "summary": "Company Peer Radar",
+        "description": "Company peer radar.",
+        "operationId": "company_peer_radar_api_v1_companies__ticker__peers_compare_get",
+        "parameters": [
+          {
+            "name": "ticker",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Ticker"
+            }
+          },
+          {
+            "name": "db_path",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "default": "/home/claude/work6/Nifty100_Data_Foundation/data/nifty100.db",
+              "title": "Db Path"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/companies/{ticker}/documents": {
+      "get": {
+        "tags": [
+          "companies"
+        ],
+        "summary": "Company Documents",
+        "description": "Company documents.",
+        "operationId": "company_documents_api_v1_companies__ticker__documents_get",
+        "parameters": [
+          {
+            "name": "ticker",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Ticker"
+            }
+          },
+          {
+            "name": "db_path",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "default": "/home/claude/work6/Nifty100_Data_Foundation/data/nifty100.db",
+              "title": "Db Path"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/screener/presets": {
+      "get": {
+        "tags": [
+          "screener"
+        ],
+        "summary": "List Presets",
+        "description": "List the named filter presets defined in config/screener_config.yaml.",
+        "operationId": "list_presets_api_v1_screener_presets_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/screener/run": {
+      "get": {
+        "tags": [
+          "screener"
+        ],
+        "summary": "Run Screener Preset",
+        "description": "Run a named preset (Quality, Value, Growth, Dividend, Debt-Free, Turnaround).",
+        "operationId": "run_screener_preset_api_v1_screener_run_get",
+        "parameters": [
+          {
+            "name": "preset",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Preset"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/screener": {
+      "get": {
+        "tags": [
+          "screener"
+        ],
+        "summary": "Run Screener",
+        "description": "Day 40 - ad-hoc screener endpoint mirroring the dashboard's\nslider filters. Every parameter is optional; omitted ones are not\nfiltered on. Returns HTTP 400 for a parameter that isn't a valid\nnumber (FastAPI's own float coercion already rejects most of\nthese, but NaN - which parses fine as a float - is rejected here\nexplicitly).",
+        "operationId": "run_screener_api_v1_screener_get",
+        "parameters": [
+          {
+            "name": "min_roe",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "number",
+              "description": "Minimum return_on_equity_pct",
+              "title": "Min Roe"
+            },
+            "description": "Minimum return_on_equity_pct"
+          },
+          {
+            "name": "max_de",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "number",
+              "description": "Maximum debt_to_equity",
+              "title": "Max De"
+            },
+            "description": "Maximum debt_to_equity"
+          },
+          {
+            "name": "min_fcf",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "number",
+              "description": "Minimum free_cash_flow_cr",
+              "title": "Min Fcf"
+            },
+            "description": "Minimum free_cash_flow_cr"
+          },
+          {
+            "name": "sector",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "description": "Filter to a single broad_sector",
+              "title": "Sector"
+            },
+            "description": "Filter to a single broad_sector"
+          },
+          {
+            "name": "min_rev_cagr_5yr",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "number",
+              "description": "Minimum 5yr revenue CAGR (%)",
+              "title": "Min Rev Cagr 5Yr"
+            },
+            "description": "Minimum 5yr revenue CAGR (%)"
+          },
+          {
+            "name": "min_pat_cagr_5yr",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "number",
+              "description": "Minimum 5yr PAT CAGR (%)",
+              "title": "Min Pat Cagr 5Yr"
+            },
+            "description": "Minimum 5yr PAT CAGR (%)"
+          },
+          {
+            "name": "max_pe",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "number",
+              "description": "Maximum P/E ratio",
+              "title": "Max Pe"
+            },
+            "description": "Maximum P/E ratio"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/sectors": {
+      "get": {
+        "tags": [
+          "sectors"
+        ],
+        "summary": "List Sectors",
+        "description": "All broad sectors with company_count, median_roe, median_pe, median_de.",
+        "operationId": "list_sectors_api_v1_sectors_get",
+        "parameters": [
+          {
+            "name": "db_path",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "default": "/home/claude/work6/Nifty100_Data_Foundation/data/nifty100.db",
+              "title": "Db Path"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/sectors/{broad_sector}/companies": {
+      "get": {
+        "tags": [
+          "sectors"
+        ],
+        "summary": "Companies In Sector",
+        "description": "All companies in a sector, with latest-year KPIs. 404 for an unknown sector.",
+        "operationId": "companies_in_sector_api_v1_sectors__broad_sector__companies_get",
+        "parameters": [
+          {
+            "name": "broad_sector",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Broad Sector"
+            }
+          },
+          {
+            "name": "db_path",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "default": "/home/claude/work6/Nifty100_Data_Foundation/data/nifty100.db",
+              "title": "Db Path"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/peers/groups": {
+      "get": {
+        "tags": [
+          "peers"
+        ],
+        "summary": "List Peer Groups",
+        "description": "List peer groups.",
+        "operationId": "list_peer_groups_api_v1_peers_groups_get",
+        "parameters": [
+          {
+            "name": "db_path",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "default": "/home/claude/work6/Nifty100_Data_Foundation/data/nifty100.db",
+              "title": "Db Path"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/peers/groups/{peer_group_name}": {
+      "get": {
+        "tags": [
+          "peers"
+        ],
+        "summary": "Peer Group Members",
+        "description": "Peer group members.",
+        "operationId": "peer_group_members_api_v1_peers_groups__peer_group_name__get",
+        "parameters": [
+          {
+            "name": "peer_group_name",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Peer Group Name"
+            }
+          },
+          {
+            "name": "db_path",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "default": "/home/claude/work6/Nifty100_Data_Foundation/data/nifty100.db",
+              "title": "Db Path"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/peers/{company_id}/percentiles": {
+      "get": {
+        "tags": [
+          "peers"
+        ],
+        "summary": "Company Peer Percentiles",
+        "description": "Company peer percentiles.",
+        "operationId": "company_peer_percentiles_api_v1_peers__company_id__percentiles_get",
+        "parameters": [
+          {
+            "name": "company_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Company Id"
+            }
+          },
+          {
+            "name": "db_path",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "default": "/home/claude/work6/Nifty100_Data_Foundation/data/nifty100.db",
+              "title": "Db Path"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/peers/{group_name}": {
+      "get": {
+        "tags": [
+          "peers"
+        ],
+        "summary": "Peer Group Detail",
+        "description": "Peer group detail.",
+        "operationId": "peer_group_detail_api_v1_peers__group_name__get",
+        "parameters": [
+          {
+            "name": "group_name",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Group Name"
+            }
+          },
+          {
+            "name": "db_path",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "default": "/home/claude/work6/Nifty100_Data_Foundation/data/nifty100.db",
+              "title": "Db Path"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/valuation/{company_id}": {
+      "get": {
+        "tags": [
+          "valuation"
+        ],
+        "summary": "Valuation History",
+        "description": "Valuation history.",
+        "operationId": "valuation_history_api_v1_valuation__company_id__get",
+        "parameters": [
+          {
+            "name": "company_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Company Id"
+            }
+          },
+          {
+            "name": "db_path",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "default": "/home/claude/work6/Nifty100_Data_Foundation/data/nifty100.db",
+              "title": "Db Path"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/valuation/{company_id}/latest": {
+      "get": {
+        "tags": [
+          "valuation"
+        ],
+        "summary": "Valuation Latest",
+        "description": "Valuation latest.",
+        "operationId": "valuation_latest_api_v1_valuation__company_id__latest_get",
+        "parameters": [
+          {
+            "name": "company_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Company Id"
+            }
+          },
+          {
+            "name": "db_path",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "default": "/home/claude/work6/Nifty100_Data_Foundation/data/nifty100.db",
+              "title": "Db Path"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/market-cap/{ticker}": {
+      "get": {
+        "tags": [
+          "market-cap"
+        ],
+        "summary": "Market Cap History",
+        "description": "Historical valuation multiples (P/E, P/B, EV/EBITDA, dividend yield) for a ticker.",
+        "operationId": "market_cap_history_api_v1_market_cap__ticker__get",
+        "parameters": [
+          {
+            "name": "ticker",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Ticker"
+            }
+          },
+          {
+            "name": "from_year",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "default": 2019,
+              "title": "From Year"
+            }
+          },
+          {
+            "name": "to_year",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "default": 2024,
+              "title": "To Year"
+            }
+          },
+          {
+            "name": "db_path",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "default": "/home/claude/work6/Nifty100_Data_Foundation/data/nifty100.db",
+              "title": "Db Path"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/portfolio/clusters": {
+      "get": {
+        "tags": [
+          "portfolio"
+        ],
+        "summary": "Cluster Assignments",
+        "description": "Cluster assignments.",
+        "operationId": "cluster_assignments_api_v1_portfolio_clusters_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/portfolio/clusters/profile": {
+      "get": {
+        "tags": [
+          "portfolio"
+        ],
+        "summary": "Cluster Profile",
+        "description": "Cluster profile.",
+        "operationId": "cluster_profile_api_v1_portfolio_clusters_profile_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/portfolio/stats": {
+      "get": {
+        "tags": [
+          "portfolio"
+        ],
+        "summary": "Portfolio Stats",
+        "description": "Portfolio stats.",
+        "operationId": "portfolio_stats_api_v1_portfolio_stats_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/portfolio/outliers": {
+      "get": {
+        "tags": [
+          "portfolio"
+        ],
+        "summary": "Outlier Report",
+        "description": "Outlier report.",
+        "operationId": "outlier_report_api_v1_portfolio_outliers_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/documents/{company_id}": {
+      "get": {
+        "tags": [
+          "documents"
+        ],
+        "summary": "Company Documents",
+        "description": "Company documents.",
+        "operationId": "company_documents_api_v1_documents__company_id__get",
+        "parameters": [
+          {
+            "name": "company_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Company Id"
+            }
+          },
+          {
+            "name": "db_path",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "default": "/home/claude/work6/Nifty100_Data_Foundation/data/nifty100.db",
+              "title": "Db Path"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/": {
+      "get": {
+        "summary": "Root",
+        "description": "Root.",
+        "operationId": "root__get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          },
+          "input": {
+            "title": "Input"
+          },
+          "ctx": {
+            "type": "object",
+            "title": "Context"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      }
+    }
+  }
+}
