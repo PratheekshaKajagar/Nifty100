@@ -2,7 +2,7 @@
 
 End-to-end financial data engineering, screening, and analytics platform covering all 92 companies in the Nifty 100 universe.
 
-Author: Jaya Nidhi
+Author: Pratheeksha Kajagar
 
 ---
 
