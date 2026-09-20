@@ -1,0 +1,32 @@
+company_id,alert_type,severity
+ADANIPOWER,ROE Deterioration,WARNING
+AMBUJACEM,Persistent Negative FCF,CRITICAL
+APOLLOHOSP,Debt Surge,WARNING
+BAJAJFINSV,Persistent Negative FCF,CRITICAL
+BAJFINANCE,Persistent Negative FCF,CRITICAL
+BEL,ROE Deterioration,WARNING
+BEL,Debt Surge,WARNING
+BRITANNIA,Debt Surge,WARNING
+CHOLAFIN,Persistent Negative FCF,CRITICAL
+COALINDIA,ROE Deterioration,WARNING
+DMART,Debt Surge,WARNING
+DRREDDY,Debt Surge,WARNING
+GRASIM,Persistent Negative FCF,CRITICAL
+HAL,ROE Deterioration,WARNING
+HDFCLIFE,Persistent Negative FCF,CRITICAL
+INDIGO,ROE Deterioration,WARNING
+IOC,Debt Surge,WARNING
+JSWENERGY,Persistent Negative FCF,CRITICAL
+LICI,ROE Deterioration,WARNING
+M&M,Persistent Negative FCF,CRITICAL
+NESTLEIND,ROE Deterioration,WARNING
+PFC,Persistent Negative FCF,CRITICAL
+PNB,Persistent Negative FCF,CRITICAL
+RECLTD,Persistent Negative FCF,CRITICAL
+SBILIFE,Persistent Negative FCF,CRITICAL
+SHRIRAMFIN,Persistent Negative FCF,CRITICAL
+SIEMENS,Debt Surge,WARNING
+TATAMOTORS,ROE Deterioration,WARNING
+TCS,ROE Deterioration,WARNING
+TITAN,Debt Surge,WARNING
+TVSMOTOR,Persistent Negative FCF,CRITICAL
