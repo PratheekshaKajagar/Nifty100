@@ -139,17 +139,7 @@ def get_valuation(ticker=None):
     return df
 
 
-@st.cache_data(ttl=600)
-def get_pros_cons(ticker):
-    """Get pros cons."""
-    conn = _connect()
-    df = pd.read_sql(
-        "SELECT pros, cons FROM prosandcons WHERE company_id = ?",
-        conn,
-        params=[ticker],
-    )
-    conn.close()
-    return df
+
 
 
 @st.cache_data(ttl=600)
