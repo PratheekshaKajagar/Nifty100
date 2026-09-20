@@ -139,7 +139,49 @@ def get_valuation(ticker=None):
     return df
 
 
+GENERATED_PROS_CONS_PATH = PROJECT_ROOT / "output" / "pros_cons_generated.csv"
 
+
+@st.cache_data(ttl=600)
+def get_pros_cons(ticker):
+    """
+    Get pros/cons for a company.
+
+    The raw `prosandcons` table (Screener.in source data) only covers a
+    handful of companies - see Section 5.7 of the project spec ("Coverage
+    gap: only ~8/92 companies"). Module 9's rule-based generator fills the
+    rest (`src/nlp/pros_cons_generator.py`) and writes long-format rows
+    (one per pro/con) to output/pros_cons_generated.csv, but that file was
+    never wired into the dashboard's data layer, so every other company
+    showed "No pros/cons data available".
+
+    This prefers the manually curated raw-table entry when one exists for
+    the ticker, and falls back to the auto-generated rows (reshaped into
+    the same pros/cons wide-string shape the Company Profile page expects)
+    for every other company.
+    """
+    conn = _connect()
+    df = pd.read_sql(
+        "SELECT pros, cons FROM prosandcons WHERE company_id = ?",
+        conn,
+        params=[ticker],
+    )
+    conn.close()
+
+    if not df.empty and (df.iloc[0].get("pros") or df.iloc[0].get("cons")):
+        return df
+
+    if not GENERATED_PROS_CONS_PATH.exists():
+        return df
+
+    generated = pd.read_csv(GENERATED_PROS_CONS_PATH)
+    company_rows = generated[generated["company_id"] == ticker]
+    if company_rows.empty:
+        return df
+
+    pros_text = ". ".join(company_rows.loc[company_rows["type"] == "pro", "text"])
+    cons_text = ". ".join(company_rows.loc[company_rows["type"] == "con", "text"])
+    return pd.DataFrame([{"pros": pros_text or None, "cons": cons_text or None}])
 
 
 @st.cache_data(ttl=600)
