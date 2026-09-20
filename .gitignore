@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+data/nifty100.db
+data/processed/
+reports/tearsheets/
+reports/sector/
+reports/radar_charts/
+reports/portfolio/

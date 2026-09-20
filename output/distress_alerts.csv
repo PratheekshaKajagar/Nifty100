@@ -1,0 +1,14 @@
+company_id,sector,cfo_quality_label,capital_allocation_label
+AXISBANK,Financials,High Quality,Growth Funded by Debt
+BAJAJFINSV,Financials,Accrual Risk,Growth Funded by Debt
+BAJFINANCE,Financials,Accrual Risk,Growth Funded by Debt
+BANKBARODA,Financials,High Quality,Growth Funded by Debt
+BHEL,Industrials,Accrual Risk,Distress Signal
+CHOLAFIN,Financials,Accrual Risk,Growth Funded by Debt
+GRASIM,Industrials,Moderate,Growth Funded by Debt
+M&M,Consumer Discretionary,High Quality,Growth Funded by Debt
+PFC,Financials,Accrual Risk,Growth Funded by Debt
+PNB,Financials,Accrual Risk,Growth Funded by Debt
+RECLTD,Financials,Accrual Risk,Growth Funded by Debt
+SHRIRAMFIN,Financials,Accrual Risk,Growth Funded by Debt
+TVSMOTOR,Consumer Discretionary,Accrual Risk,Growth Funded by Debt

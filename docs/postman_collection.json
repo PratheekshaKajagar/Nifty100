@@ -1,0 +1,852 @@
+{
+  "info": {
+    "name": "Nifty100 Data Foundation API",
+    "description": "Auto-generated from the FastAPI OpenAPI schema.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:8000",
+      "type": "string"
+    }
+  ],
+  "item": [
+    {
+      "name": "Health Check",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/api/v1/health",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "health"
+          ],
+          "query": []
+        },
+        "description": "Health check."
+      },
+      "response": []
+    },
+    {
+      "name": "List Companies",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/api/v1/companies",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "companies"
+          ],
+          "query": [
+            {
+              "key": "sector",
+              "value": "Information Technology",
+              "disabled": true
+            },
+            {
+              "key": "market_cap_category",
+              "value": "example",
+              "disabled": true
+            },
+            {
+              "key": "search",
+              "value": "Tata",
+              "disabled": true
+            },
+            {
+              "key": "db_path",
+              "value": "example",
+              "disabled": true
+            }
+          ]
+        },
+        "description": "List companies."
+      },
+      "response": []
+    },
+    {
+      "name": "Get Company",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/api/v1/companies/TCS",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "companies",
+            "TCS"
+          ],
+          "query": [
+            {
+              "key": "db_path",
+              "value": "example",
+              "disabled": true
+            }
+          ]
+        },
+        "description": "Get company."
+      },
+      "response": []
+    },
+    {
+      "name": "Company Pl",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/api/v1/companies/TCS/pl",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "companies",
+            "TCS",
+            "pl"
+          ],
+          "query": [
+            {
+              "key": "from_year",
+              "value": "2020",
+              "disabled": true
+            },
+            {
+              "key": "to_year",
+              "value": "2023",
+              "disabled": true
+            },
+            {
+              "key": "db_path",
+              "value": "example",
+              "disabled": true
+            }
+          ]
+        },
+        "description": "Company pl."
+      },
+      "response": []
+    },
+    {
+      "name": "Company Balance Sheet",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/api/v1/companies/TCS/bs",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "companies",
+            "TCS",
+            "bs"
+          ],
+          "query": [
+            {
+              "key": "from_year",
+              "value": "2020",
+              "disabled": true
+            },
+            {
+              "key": "to_year",
+              "value": "2023",
+              "disabled": true
+            },
+            {
+              "key": "db_path",
+              "value": "example",
+              "disabled": true
+            }
+          ]
+        },
+        "description": "Company balance sheet."
+      },
+      "response": []
+    },
+    {
+      "name": "Company Cashflow",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/api/v1/companies/TCS/cashflow",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "companies",
+            "TCS",
+            "cashflow"
+          ],
+          "query": [
+            {
+              "key": "from_year",
+              "value": "2020",
+              "disabled": true
+            },
+            {
+              "key": "to_year",
+              "value": "2023",
+              "disabled": true
+            },
+            {
+              "key": "db_path",
+              "value": "example",
+              "disabled": true
+            }
+          ]
+        },
+        "description": "Company cashflow."
+      },
+      "response": []
+    },
+    {
+      "name": "Company Ratios",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/api/v1/companies/TCS/ratios",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "companies",
+            "TCS",
+            "ratios"
+          ],
+          "query": [
+            {
+              "key": "year",
+              "value": "2023",
+              "disabled": true
+            },
+            {
+              "key": "db_path",
+              "value": "example",
+              "disabled": true
+            }
+          ]
+        },
+        "description": "Company ratios."
+      },
+      "response": []
+    },
+    {
+      "name": "Company Tearsheet",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/api/v1/companies/TCS/tearsheet",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "companies",
+            "TCS",
+            "tearsheet"
+          ],
+          "query": [
+            {
+              "key": "db_path",
+              "value": "example",
+              "disabled": true
+            }
+          ]
+        },
+        "description": "Company tearsheet."
+      },
+      "response": []
+    },
+    {
+      "name": "Company Peer Radar",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/api/v1/companies/TCS/peers/compare",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "companies",
+            "TCS",
+            "peers",
+            "compare"
+          ],
+          "query": [
+            {
+              "key": "db_path",
+              "value": "example",
+              "disabled": true
+            }
+          ]
+        },
+        "description": "Company peer radar."
+      },
+      "response": []
+    },
+    {
+      "name": "Company Documents",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/api/v1/companies/TCS/documents",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "companies",
+            "TCS",
+            "documents"
+          ],
+          "query": [
+            {
+              "key": "db_path",
+              "value": "example",
+              "disabled": true
+            }
+          ]
+        },
+        "description": "Company documents."
+      },
+      "response": []
+    },
+    {
+      "name": "List Presets",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/api/v1/screener/presets",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "screener",
+            "presets"
+          ],
+          "query": []
+        },
+        "description": "List the named filter presets defined in config/screener_config.yaml."
+      },
+      "response": []
+    },
+    {
+      "name": "Run Screener Preset",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/api/v1/screener/run",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "screener",
+            "run"
+          ],
+          "query": [
+            {
+              "key": "preset",
+              "value": "Quality",
+              "disabled": false
+            }
+          ]
+        },
+        "description": "Run a named preset (Quality, Value, Growth, Dividend, Debt-Free, Turnaround)."
+      },
+      "response": []
+    },
+    {
+      "name": "Run Screener",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/api/v1/screener",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "screener"
+          ],
+          "query": [
+            {
+              "key": "min_roe",
+              "value": "15",
+              "disabled": true
+            },
+            {
+              "key": "max_de",
+              "value": "1.5",
+              "disabled": true
+            },
+            {
+              "key": "min_fcf",
+              "value": "0",
+              "disabled": true
+            },
+            {
+              "key": "sector",
+              "value": "Information Technology",
+              "disabled": true
+            },
+            {
+              "key": "min_rev_cagr_5yr",
+              "value": "10",
+              "disabled": true
+            },
+            {
+              "key": "min_pat_cagr_5yr",
+              "value": "10",
+              "disabled": true
+            },
+            {
+              "key": "max_pe",
+              "value": "40",
+              "disabled": true
+            }
+          ]
+        },
+        "description": "Day 40 - ad-hoc screener endpoint mirroring the dashboard's\nslider filters. Every parameter is optional; omitted ones are not\nfiltered on. Returns HTTP 400 for a parameter that isn't a valid\nnumber (FastAPI's own float coercion already rejects most of\nthese, but NaN - which parses fine as a float - is rejected here\nexplicitly)."
+      },
+      "response": []
+    },
+    {
+      "name": "List Sectors",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/api/v1/sectors",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "sectors"
+          ],
+          "query": [
+            {
+              "key": "db_path",
+              "value": "example",
+              "disabled": true
+            }
+          ]
+        },
+        "description": "All broad sectors with company_count, median_roe, median_pe, median_de."
+      },
+      "response": []
+    },
+    {
+      "name": "Companies In Sector",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/api/v1/sectors/Information Technology/companies",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "sectors",
+            "Information Technology",
+            "companies"
+          ],
+          "query": [
+            {
+              "key": "db_path",
+              "value": "example",
+              "disabled": true
+            }
+          ]
+        },
+        "description": "All companies in a sector, with latest-year KPIs. 404 for an unknown sector."
+      },
+      "response": []
+    },
+    {
+      "name": "List Peer Groups",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/api/v1/peers/groups",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "peers",
+            "groups"
+          ],
+          "query": [
+            {
+              "key": "db_path",
+              "value": "example",
+              "disabled": true
+            }
+          ]
+        },
+        "description": "List peer groups."
+      },
+      "response": []
+    },
+    {
+      "name": "Peer Group Members",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/api/v1/peers/groups/IT Services",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "peers",
+            "groups",
+            "IT Services"
+          ],
+          "query": [
+            {
+              "key": "db_path",
+              "value": "example",
+              "disabled": true
+            }
+          ]
+        },
+        "description": "Peer group members."
+      },
+      "response": []
+    },
+    {
+      "name": "Company Peer Percentiles",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/api/v1/peers/TCS/percentiles",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "peers",
+            "TCS",
+            "percentiles"
+          ],
+          "query": [
+            {
+              "key": "db_path",
+              "value": "example",
+              "disabled": true
+            }
+          ]
+        },
+        "description": "Company peer percentiles."
+      },
+      "response": []
+    },
+    {
+      "name": "Peer Group Detail",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/api/v1/peers/IT Services",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "peers",
+            "IT Services"
+          ],
+          "query": [
+            {
+              "key": "db_path",
+              "value": "example",
+              "disabled": true
+            }
+          ]
+        },
+        "description": "Peer group detail."
+      },
+      "response": []
+    },
+    {
+      "name": "Valuation History",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/api/v1/valuation/TCS",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "valuation",
+            "TCS"
+          ],
+          "query": [
+            {
+              "key": "db_path",
+              "value": "example",
+              "disabled": true
+            }
+          ]
+        },
+        "description": "Valuation history."
+      },
+      "response": []
+    },
+    {
+      "name": "Valuation Latest",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/api/v1/valuation/TCS/latest",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "valuation",
+            "TCS",
+            "latest"
+          ],
+          "query": [
+            {
+              "key": "db_path",
+              "value": "example",
+              "disabled": true
+            }
+          ]
+        },
+        "description": "Valuation latest."
+      },
+      "response": []
+    },
+    {
+      "name": "Market Cap History",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/api/v1/market-cap/TCS",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "market-cap",
+            "TCS"
+          ],
+          "query": [
+            {
+              "key": "from_year",
+              "value": "2020",
+              "disabled": true
+            },
+            {
+              "key": "to_year",
+              "value": "2023",
+              "disabled": true
+            },
+            {
+              "key": "db_path",
+              "value": "example",
+              "disabled": true
+            }
+          ]
+        },
+        "description": "Historical valuation multiples (P/E, P/B, EV/EBITDA, dividend yield) for a ticker."
+      },
+      "response": []
+    },
+    {
+      "name": "Cluster Assignments",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/api/v1/portfolio/clusters",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "portfolio",
+            "clusters"
+          ],
+          "query": []
+        },
+        "description": "Cluster assignments."
+      },
+      "response": []
+    },
+    {
+      "name": "Cluster Profile",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/api/v1/portfolio/clusters/profile",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "portfolio",
+            "clusters",
+            "profile"
+          ],
+          "query": []
+        },
+        "description": "Cluster profile."
+      },
+      "response": []
+    },
+    {
+      "name": "Portfolio Stats",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/api/v1/portfolio/stats",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "portfolio",
+            "stats"
+          ],
+          "query": []
+        },
+        "description": "Portfolio stats."
+      },
+      "response": []
+    },
+    {
+      "name": "Outlier Report",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/api/v1/portfolio/outliers",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "portfolio",
+            "outliers"
+          ],
+          "query": []
+        },
+        "description": "Outlier report."
+      },
+      "response": []
+    },
+    {
+      "name": "Company Documents",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/api/v1/documents/TCS",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "documents",
+            "TCS"
+          ],
+          "query": [
+            {
+              "key": "db_path",
+              "value": "example",
+              "disabled": true
+            }
+          ]
+        },
+        "description": "Company documents."
+      },
+      "response": []
+    },
+    {
+      "name": "Root",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [],
+          "query": []
+        },
+        "description": "Root."
+      },
+      "response": []
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+Dataset,Rows,Columns
+analysis,21,6
+balancesheet,1313,13
+cashflow,1188,7
+companies,93,12
+documents,1586,4
+financial_ratios,1184,16
+market_cap,552,9
+peer_groups,56,4
+profitandloss,1277,15
+prosandcons,17,4
+sectors,92,6
+stock_prices,5520,9

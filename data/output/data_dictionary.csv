@@ -1,0 +1,106 @@
+Dataset,Column Name,Data Type,Missing Values,Unique Values,Example Value
+analysis,Bluestock Fintech — Nifty 100  |  Analysis  |  20 records,str,0,21,id
+analysis,Unnamed: 1,str,0,6,company_id
+analysis,Unnamed: 2,str,0,21,compounded_sales_growth
+analysis,Unnamed: 3,str,0,19,compounded_profit_growth
+analysis,Unnamed: 4,str,0,21,stock_price_cagr
+analysis,Unnamed: 5,str,0,21,roe
+balancesheet,"Bluestock Fintech — Nifty 100  |  Balance Sheet  |  1,312 records",object,0,1313,id
+balancesheet,Unnamed: 1,str,0,99,company_id
+balancesheet,Unnamed: 2,str,0,55,year
+balancesheet,Unnamed: 3,object,0,432,equity_capital
+balancesheet,Unnamed: 4,object,0,1194,reserves
+balancesheet,Unnamed: 5,object,0,1032,borrowings
+balancesheet,Unnamed: 6,object,0,1180,other_liabilities
+balancesheet,Unnamed: 7,object,0,1205,total_liabilities
+balancesheet,Unnamed: 8,object,0,1155,fixed_assets
+balancesheet,Unnamed: 9,object,0,779,cwip
+balancesheet,Unnamed: 10,object,0,1070,investments
+balancesheet,Unnamed: 11,object,0,1197,other_asset
+balancesheet,Unnamed: 12,object,0,1205,total_assets
+cashflow,"Bluestock Fintech — Nifty 100  |  Cash Flow  |  1,187 records",object,0,1188,id
+cashflow,Unnamed: 1,str,0,101,company_id
+cashflow,Unnamed: 2,str,0,52,year
+cashflow,Unnamed: 3,object,2,1107,operating_activity
+cashflow,Unnamed: 4,object,2,1063,investing_activity
+cashflow,Unnamed: 5,object,2,1078,financing_activity
+cashflow,Unnamed: 6,object,2,924,net_cash_flow
+companies,Mkt Fintech — Nifty 100  |  Companies  |  92 records,str,0,93,id
+companies,Unnamed: 1,str,1,91,company_logo
+companies,Unnamed: 2,str,0,93,company_name
+companies,Unnamed: 3,str,0,55,chart_link
+companies,Unnamed: 4,str,0,93,about_company
+companies,Unnamed: 5,str,1,91,website
+companies,Unnamed: 6,str,1,92,nse_profile
+companies,Unnamed: 7,str,1,92,bse_profile
+companies,Unnamed: 8,object,1,5,face_value
+companies,Unnamed: 9,object,1,85,book_value
+companies,Unnamed: 10,object,1,85,roce_percentage
+companies,Unnamed: 11,object,2,86,roe_percentage
+documents,"Bluestock Fintech — Nifty 100  |  Documents  |  1,585 records",object,0,1586,id
+documents,Unnamed: 1,str,0,100,company_id
+documents,Unnamed: 2,object,0,19,Year
+documents,Unnamed: 3,str,52,1170,Annual_Report
+financial_ratios,id,int64,0,1184,1
+financial_ratios,company_id,str,0,92,ABB
+financial_ratios,year,str,0,39,Dec 2012
+financial_ratios,net_profit_margin_pct,float64,1,906,8.77
+financial_ratios,operating_profit_margin_pct,float64,61,310,12.0
+financial_ratios,return_on_equity_pct,float64,0,948,22.41
+financial_ratios,debt_to_equity,float64,0,924,0.0
+financial_ratios,interest_coverage,float64,93,1018,138.3333
+financial_ratios,asset_turnover,float64,1,1019,1.8225
+financial_ratios,free_cash_flow_cr,float64,2,1006,42.0
+financial_ratios,capex_cr,float64,2,962,59.0
+financial_ratios,earnings_per_share,float64,4,216,68.0
+financial_ratios,book_value_per_share,float64,0,1047,3.081
+financial_ratios,dividend_payout_ratio_pct,float64,4,134,25.0
+financial_ratios,total_debt_cr,int64,0,888,0
+financial_ratios,cash_from_operations_cr,float64,2,1026,101.0
+market_cap,id,int64,0,552,1
+market_cap,company_id,str,0,92,ABB
+market_cap,year,int64,0,6,2019
+market_cap,market_cap_crore,float64,0,552,844312.98
+market_cap,enterprise_value_crore,float64,0,552,814410.48
+market_cap,pe_ratio,float64,0,533,19.29
+market_cap,pb_ratio,float64,0,461,14.26
+market_cap,ev_ebitda,float64,0,514,22.84
+market_cap,dividend_yield_pct,float64,0,316,0.84
+peer_groups,id,int64,0,56,1
+peer_groups,peer_group_name,str,0,11,Private Banks
+peer_groups,company_id,str,0,56,HDFCBANK
+peer_groups,is_benchmark,bool,0,2,True
+profitandloss,"Bluestock Fintech — Nifty 100  |  Profit & Loss  |  1,276 records",object,0,1277,id
+profitandloss,Unnamed: 1,str,0,101,company_id
+profitandloss,Unnamed: 2,str,0,45,year
+profitandloss,Unnamed: 3,object,0,1258,sales
+profitandloss,Unnamed: 4,object,0,1205,expenses
+profitandloss,Unnamed: 5,object,13,1216,operating_profit
+profitandloss,Unnamed: 6,object,15,347,opm_percentage
+profitandloss,Unnamed: 7,object,0,825,other_income
+profitandloss,Unnamed: 8,object,0,898,interest
+profitandloss,Unnamed: 9,object,0,954,depreciation
+profitandloss,Unnamed: 10,object,0,1205,profit_before_tax
+profitandloss,Unnamed: 11,object,95,117,tax_percentage
+profitandloss,Unnamed: 12,object,0,1183,net_profit
+profitandloss,Unnamed: 13,object,5,241,eps
+profitandloss,Unnamed: 14,object,103,141,dividend_payout
+prosandcons,Bluestock Fintech — Nifty 100  |  Pros & Cons  |  16 records,object,0,17,id
+prosandcons,Unnamed: 1,str,0,6,company_id
+prosandcons,Unnamed: 2,str,5,10,pros
+prosandcons,Unnamed: 3,str,1,16,cons
+sectors,id,int64,0,92,1
+sectors,company_id,str,0,92,ABB
+sectors,broad_sector,str,0,10,Industrials
+sectors,sub_sector,str,0,46,Capital Goods
+sectors,index_weight_pct,float64,0,82,0.81
+sectors,market_cap_category,str,0,2,Large Cap
+stock_prices,id,int64,0,5520,1
+stock_prices,company_id,str,0,92,ABB
+stock_prices,date,str,0,60,2020-01-01
+stock_prices,open_price,float64,0,5498,1958.61
+stock_prices,high_price,float64,0,5496,2150.53
+stock_prices,low_price,float64,0,5493,1835.28
+stock_prices,close_price,float64,0,5501,1964.3
+stock_prices,volume,int64,0,5520,26184368
+stock_prices,adjusted_close,float64,0,5501,1964.3
